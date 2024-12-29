@@ -1,23 +1,13 @@
 import os
 import ssl
 import random
-import nltk
 import streamlit as st
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 
-# Resolve SSL and NLTK data issues
+# Resolve SSL issues
 ssl._create_default_https_context = ssl._create_unverified_context
-
-# Ensure NLTK data is available or download it
-nltk_data_path = os.path.abspath("nltk_data")
-nltk.data.path.append(nltk_data_path)
-
-try:
-    nltk.data.find('tokenizers/punkt')
-except LookupError:
-    nltk.download('punkt', download_dir=nltk_data_path)
 
 # Define intents for green technology
 intents = [
@@ -79,12 +69,13 @@ clf.fit(x_train, y_train)
 # Define the chatbot function
 def chatbot(input_text):
     input_text = vectorizer.transform([input_text])
-    tag = clf.predict(input_text)[0]
-    for intent in intents:
-        if intent['tag'] == tag:
-            response = random.choice(intent['responses'])
-            return response
-    return "I'm sorry, I didn't understand that. Could you rephrase?"
+    try:
+        tag = clf.predict(input_text)[0]
+        for intent in intents:
+            if intent['tag'] == tag:
+                return random.choice(intent['responses'])
+    except:
+        return "I'm sorry, I didn't understand that. Could you rephrase?"
 
 # Streamlit chatbot UI
 counter = 0
@@ -99,7 +90,7 @@ def main():
         response = chatbot(user_input)
         st.text_area("Chatbot:", value=response, height=100, max_chars=None, key=f"chatbot_response_{counter}")
         
-        if response.lower() in ['goodbye', 'bye']:
+        if "goodbye" in response.lower() or "bye" in response.lower():
             st.write("Thank you for using me! Stay eco-friendly and protect our planet.")
             st.stop()
 
