@@ -78,17 +78,14 @@ def chatbot(input_text):
         return "I'm sorry, I didn't understand that. Could you rephrase?"
 
 # Streamlit chatbot UI
-counter = 0
 def main():
-    global counter
     st.title("Green Technology ChatBot")
     st.write("Welcome! I'm here to help you learn about green technology and sustainability.")
     
-    counter += 1
-    user_input = st.text_input("You:", key=f"user_input_{counter}")
+    user_input = st.text_input("You:", key="user_input")
     if user_input:
         response = chatbot(user_input)
-        st.text_area("Chatbot:", value=response, height=100, max_chars=None, key=f"chatbot_response_{counter}")
+        st.text_area("Chatbot:", value=response, height=100, max_chars=None, key="chatbot_response")
         
         if "goodbye" in response.lower() or "bye" in response.lower():
             st.write("Thank you for using me! Stay eco-friendly and protect our planet.")
