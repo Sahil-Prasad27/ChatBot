@@ -9,8 +9,15 @@ from sklearn.model_selection import train_test_split
 
 # Resolve SSL and NLTK data issues
 ssl._create_default_https_context = ssl._create_unverified_context
-nltk.data.path.append(os.path.abspath("nltk_data"))
-nltk.download('punkt')
+
+# Ensure NLTK data is available or download it
+nltk_data_path = os.path.abspath("nltk_data")
+nltk.data.path.append(nltk_data_path)
+
+try:
+    nltk.data.find('tokenizers/punkt')
+except LookupError:
+    nltk.download('punkt', download_dir=nltk_data_path)
 
 # Define intents for green technology
 intents = [
