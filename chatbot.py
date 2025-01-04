@@ -6,10 +6,10 @@ from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
 from sklearn.model_selection import train_test_split
 
-# Resolve SSL issues
+
 ssl._create_default_https_context = ssl._create_unverified_context
 
-# Define intents for green technology
+
 intents = [
     {
         "tag": "greeting",
@@ -263,7 +263,6 @@ intents = [
     }
 ]
 
-# Prepare data for training
 tags = []
 patterns = []
 
@@ -272,7 +271,6 @@ for intent in intents:
         tags.append(intent['tag'])
         patterns.append(pattern)
 
-# Train model
 vectorizer = TfidfVectorizer()
 x = vectorizer.fit_transform(patterns)
 y = tags
@@ -282,7 +280,6 @@ x_train, x_test, y_train, y_test = train_test_split(x, y, test_size=0.2, random_
 clf = LogisticRegression(random_state=0, max_iter=10000)
 clf.fit(x_train, y_train)
 
-# Define the chatbot function
 def chatbot(input_text):
     try:
         for intent in intents:
@@ -291,31 +288,31 @@ def chatbot(input_text):
     except:
         return "I'm sorry, I didn't understand that. Could you rephrase?"
 
-# Streamlit chatbot UI
+
 def main():
     st.title("Green Technology ChatBot")
     st.write("Welcome! I'm here to help you learn about green technology and sustainability.")
     
-    # Initialize session state for chat history if it doesn't exist
+    
     if 'chat_history' not in st.session_state:
         st.session_state.chat_history = []
 
-    # User input
+    
     user_input = st.text_input("You:", key="user_input")
 
     if user_input:
-        # Get the chatbot response
+       
         response = chatbot(user_input)
 
-        # Add the user input and chatbot response to the session history
+        
         st.session_state.chat_history = [(f"You: {user_input}", f"ChatBot: {response}")]
 
-        # Display the latest chat history (only the most recent message)
+        
         for user_msg, bot_msg in st.session_state.chat_history:
             st.write(user_msg)
             st.write(bot_msg)
 
-        # Check if response includes "goodbye" or "bye"
+        
         if "goodbye" in response.lower() or "bye" in response.lower():
             st.write("Thank you for using me! Stay eco-friendly and protect our planet.")
             st.stop()
