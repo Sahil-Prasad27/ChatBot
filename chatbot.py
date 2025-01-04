@@ -12,763 +12,255 @@ ssl._create_default_https_context = ssl._create_unverified_context
 # Define intents for green technology
 intents = [
     {
-   "tag": "greeting",
-   "patterns": [
-      "Hi",
-      "How are you?",
-      "Is anyone there?",
-      "Hello",
-      "Good day",
-      "What's up",
-      "how are ya",
-      "heyy",
-      "whatsup",
-      "??? ??? ??"
-   ],
-   "responses": [
-      "Hello!",
-      "Good to see you again!",
-      "Hi there, how can I help?"
-   ],
-   "context_set": ""
-},
- {
-   "tag": "goodbye",
-   "patterns": [
-      "cya",
-      "see you",
-      "bye bye",
-      "See you later",
-      "Goodbye",
-      "I am Leaving",
-      "Bye",
-      "Have a Good day",
-      "talk to you later",
-      "ttyl",
-      "i got to go",
-      "gtg"
-   ],
-   "responses": [
-      "Sad to see you go :(",
-      "Talk to you later",
-      "Goodbye!",
-      "Come back soon"
-   ],
-   "context_set": ""
-},
- {
-   "tag": "creator",
-   "patterns": [
-      "what is the name of your developers",
-      "what is the name of your creators",
-      "what is the name of the developers",
-      "what is the name of the creators",
-      "who created you",
-      "your developers",
-      "your creators",
-      "who are your developers",
-      "developers",
-      "you are made by",
-      "you are made by whom",
-      "who created you",
-      "who create you",
-      "creators",
-      "who made you",
-      "who designed you"
-   ],
-   "responses": [
-      "College students"
-   ],
-   "context_set": ""
-},
- {
-   "tag": "name",
-   "patterns": [
-      "name",
-      "your name",
-      "do you have a name",
-      "what are you called",
-      "what is your name",
-      "what should I call you",
-      "whats your name?",
-      "what are you",
-      "who are you",
-      "who is this",
-      "what am i chatting to",
-      "who am i taking to",
-      "what are you"
-   ],
-   "responses": [
-      "You can call me Mind Reader.",
-      "I'm Mind Reader",
-      "I am a Chatbot.",
-      "I am your helper"
-   ],
-   "context_set": ""
-},
- {
-   "tag": "hours",
-   "patterns": [
-      "timing of college",
-      "what is college timing",
-      "working days",
-      "when are you guys open",
-      "what are your hours",
-      "hours of operation",
-      "when is the college open",
-      "college timing",
-      "what about college timing",
-      "is college open on saturday",
-      "tell something about college timing",
-      "what is the college  hours",
-      "when should i come to college",
-      "when should i attend college",
-      "what is my college time",
-      "college timing",
-      "timing college"
-   ],
-   "responses": [
-      "College is open 8am-5pm Monday-Saturday!"
-   ],
-   "context_set": ""
-},
- {
-   "tag": "number",
-   "patterns": [
-      "more info",
-      "contact info",
-      "how to contact college",
-      "college telephone number",
-      "college number",
-      "What is your contact no",
-      "Contact number?",
-      "how to call you",
-      "College phone no?",
-      "how can i contact you",
-      "Can i get your phone number",
-      "how can i call you",
-      "phone number",
-      "phone no",
-      "call"
-   ],
-   "responses": [
-      "You can contact at: NUMBER"
-   ],
-   "context_set": ""
-},
- {
-   "tag": "course",
-   "patterns": [
-      "list of courses",
-      "list of courses offered",
-      "list of courses offered in",
-      "what are the courses offered in your college?",
-      "courses?",
-      "courses offered",
-      "courses offered in (your univrsity(UNI) name)",
-      "courses you offer",
-      "branches?",
-      "courses available at UNI?",
-      "branches available at your college?",
-      "what are the courses in UNI?",
-      "what are branches in UNI?",
-      "what are courses in UNI?",
-      "branches available in UNI?",
-      "can you tell me the courses available in UNI?",
-      "can you tell me the branches available in UNI?",
-      "computer engineering?",
-      "computer",
-      "Computer engineering?",
-      "it",
-      "IT",
-      "Information Technology",
-      "AI/Ml",
-      "Mechanical engineering",
-      "Chemical engineering",
-      "Civil engineering"
-   ],
-   "responses": [
-      "Our university offers Information Technology, computer Engineering, Mechanical engineering,Chemical engineering, Civil engineering and extc Engineering."
-   ],
-   "context_set": ""
-},
- {
-   "tag": "fees",
-   "patterns": [
-      "information about fee",
-      "information on fee",
-      "tell me the fee",
-      "college fee",
-      "fee per semester",
-      "what is the fee of each semester",
-      "what is the fees of each year",
-      "what is fee",
-      "what is the fees",
-      "how much is the fees",
-      "fees for first year",
-      "fees",
-      "about the fees",
-      "tell me something about the fees",
-      "What is the fees of hostel",
-      "how much is the fees",
-      "hostel fees",
-      "fees for AC room",
-      "fees for non-AC room",
-      "fees for Ac room for girls",
-      "fees for non-Ac room for girls",
-      "fees for Ac room for boys",
-      "fees for non-Ac room for boys"
-   ],
-   "responses": [
-      "For Fee detail visit <a target=\"_blank\" href=\"LINK\"> here</a>"
-   ],
-   "context_set": ""
-},
- {
-   "tag": "location",
-   "patterns": [
-      "where is the college located",
-      "college is located at",
-      "where is college",
-      "where is college located",
-      "address of college",
-      "how to reach college",
-      "college location",
-      "college address",
-      "wheres the college",
-      "how can I reach college",
-      "whats is the college address",
-      "what is the address of college",
-      "address",
-      "location"
-   ],
-   "responses": [
-      "<a target=\"_blank\" href=\"ADD YOU GOOGLE MAP LINK HERE\"> here</a>"
-   ],
-   "context_set": ""
-},
- {
-   "tag": "hostel",
-   "patterns": [
-      "hostel facility",
-      "hostel servive",
-      "hostel location",
-      "hostel address",
-      "hostel facilities",
-      "hostel fees",
-      "Does college provide hostel",
-      "Is there any hostel",
-      "Where is hostel",
-      "do you have hostel",
-      "do you guys have hostel",
-      "hostel",
-      "hostel capacity",
-      "what is the hostel fee",
-      "how to get in hostel",
-      "what is the hostel address",
-      "how far is hostel from college",
-      "hostel college distance",
-      "where is the hostel",
-      "how big is the hostel",
-      "distance between college and hostel",
-      "distance between hostel and college"
-   ],
-   "responses": [
-      "For hostel detail visit <a target=\"_blank\" href=\"ADD YOUR HOSTEL DETAIL PDF LINK OR ANY INFORMATION LINK OR ADD YOU OWN ANSWERS\"> here</a>"
-   ],
-   "context_set": ""
-},
- {
-   "tag": "event",
-   "patterns": [
-      "events organised",
-      "list of events",
-      "list of events organised in college",
-      "list of events conducted in college",
-      "What events are conducted in college",
-      "Are there any event held at college",
-      "Events?",
-      "functions",
-      "what are the events",
-      "tell me about events",
-      "what about events"
-   ],
-   "responses": [
-      "For event detail visit <a target=\"_blank\" href=\"ADD YOUR FUNCTIONS LINK OR YOUR OWN RESPONSE\"> here</a>"
-   ],
-   "context_set": ""
-},
- {
-   "tag": "document",
-   "patterns": [
-      "document to bring",
-      "documents needed for admision",
-      "documents needed at the time of admission",
-      "documents needed during admission",
-      "documents required for admision",
-      "documents required at the time of admission",
-      "documents required during admission",
-      "What document are required for admission",
-      "Which document to bring for admission",
-      "documents",
-      "what documents do i need",
-      "what documents do I need for admission",
-      "documents needed"
-   ],
-   "responses": [
-      "To know more about document required visit <a target=\"_blank\" href=\"ADD LINK OF ADMISSION GUIDANCE DOCUMENT FROM YOUR UNIVERSITY WEBSITE\"> here</a>"
-   ],
-   "context_set": ""
-},
- {
-   "tag": "floors",
-   "patterns": [
-      "size of campus",
-      "building size",
-      "How many floors does college have",
-      "floors in college",
-      "floors in college",
-      "how tall is UNI's College of Engineering college building",
-      "floors"
-   ],
-   "responses": [
-      "My College has total 2 floors "
-   ],
-   "context_set": ""
-},
- {
-   "tag": "syllabus",
-   "patterns": [
-      "Syllabus for IT",
-      "what is the Information Technology syllabus",
-      "syllabus",
-      "timetable",
-      "what is IT syllabus",
-      "syllabus",
-      "What is next lecture"
-   ],
-   "responses": [
-      "Timetable provide direct to the students OR To know about syllabus visit <a target=\"_blank\" href=\"TIMETABLE LINK\"> here</a>"
-   ],
-   "context_set": ""
-},
- {
-   "tag": "library",
-   "patterns": [
-      "is there any library",
-      "library facility",
-      "library facilities",
-      "do you have library",
-      "does the college have library facility",
-      "college library",
-      "where can i get books",
-      "book facility",
-      "Where is library",
-      "Library",
-      "Library information",
-      "Library books information",
-      "Tell me about library",
-      "how many libraries"
-   ],
-   "responses": [
-      "There is one huge and spacious library.timings are 8am to 6pm and for more visit <a target=\"blank\" href=\"ADD LIBRARY DETAIL LINK\">here</a>"
-   ],
-   "context_set": ""
-},
- {
-   "tag": "infrastructure",
-   "patterns": [
-      "how is college infrastructure",
-      "infrastructure",
-      "college infrastructure"
-   ],
-   "responses": [
-      "Our University has Excellent Infrastructure. Campus is clean. Good IT Labs With Good Speed of Internet connection"
-   ],
-   "context_set": ""
-},
- {
-   "tag": "canteen",
-   "patterns": [
-      "food facilities",
-      "canteen facilities",
-      "canteen facility",
-      "is there any canteen",
-      "Is there a cafetaria in college",
-      "Does college have canteen",
-      "Where is canteen",
-      "where is cafetaria",
-      "canteen",
-      "Food",
-      "Cafetaria"
-   ],
-   "responses": [
-      "Our university has canteen with variety of food available"
-   ],
-   "context_set": ""
-},
- {
-   "tag": "menu",
-   "patterns": [
-      "food menu",
-      "food in canteen",
-      "Whats there on menu",
-      "what is available in college canteen",
-      "what foods can we get in college canteen",
-      "food variety",
-      "What is there to eat?"
-   ],
-   "responses": [
-      "we serve Franky, Locho, Alu-puri, Kachori, Khavsa, Thaali and many more on menu"
-   ],
-   "context_set": ""
-},
- {
-   "tag": "placement",
-   "patterns": [
-      "What is college placement",
-      "Which companies visit in college",
-      "What is average package",
-      "companies visit",
-      "package",
-      "About placement",
-      "placement",
-      "recruitment",
-      "companies"
-   ],
-   "responses": [
-      "To know about placement visit <a target=\"_blank\" href=\"PLACEMENT INFORMATION LINK FROM YOUR UNIVERSITY WEBSITE IF THEY HAVE\">here</a>"
-   ],
-   "context_set": ""
-},
- {
-   "tag": "ithod",
-   "patterns": [
-      "Who is HOD",
-      "Where is HOD",
-      "it hod",
-      "name of it hod"
-   ],
-   "responses": [
-      "All engineering departments have only one hod XYZ who available on (Place name)"
-   ],
-   "context_set": ""
-},
- {
-   "tag": "computerhod",
-   "patterns": [
-      "Who is computer HOD",
-      "Where is computer HOD",
-      "computer hod",
-      "name of computer hod"
-   ],
-   "responses": [
-      "All engineering departments have only one hod XYZ who available on (PLACE NAME)"
-   ],
-   "context_set": ""
-},
- {
-   "tag": "extchod",
-   "patterns": [
-      "Who is extc HOD",
-      "Where is  extc HOD",
-      "extc hod",
-      "name of extc hod"
-   ],
-   "responses": [
-      "Different school wise hod are different.So be more clear with your school or department"
-   ],
-   "context_set": ""
-},
- {
-   "tag": "principal",
-   "patterns": [
-      "what is the name of principal",
-      "whatv is the principal name",
-      "principal name",
-      "Who is college principal",
-      "Where is principal's office",
-      "principal",
-      "name of principal"
-   ],
-   "responses": [
-      "XYZ is college principal and if you need any help then call your branch hod first.That is more appropriate"
-   ],
-   "context_set": ""
-},
- {
-   "tag": "sem",
-   "patterns": [
-      "exam dates",
-      "exam schedule",
-      "When is semester exam",
-      "Semester exam timetable",
-      "sem",
-      "semester",
-      "exam",
-      "when is exam",
-      "exam timetable",
-      "exam dates",
-      "when is semester"
-   ],
-   "responses": [
-      "Here is the Academic Calendar  <a target=\"_blank\" href=\"YOUR ACADEMIC CALENDER\">website</a>"
-   ],
-   "context_set": ""
-},
- {
-   "tag": "admission",
-   "patterns": [
-      "what is the process of admission",
-      "what is the admission process",
-      "How to take admission in your college",
-      "What is the process for admission",
-      "admission",
-      "admission process"
-   ],
-   "responses": [
-      "Application can also be submitted online through the Unversity's  <a target=\"_blank\" href=\"LINK OF ADMISSION DOCUMENT\">website</a>"
-   ],
-   "context_set": ""
-},
- {
-   "tag": "scholarship",
-   "patterns": [
-      "scholarship",
-      "Is scholarship available",
-      "scholarship engineering",
-      "scholarship it",
-      "scholarship ce",
-      "scholarship mechanical",
-      "scholarship civil",
-      "scholarship chemical",
-      "scholarship for AI/ML",
-      "available scholarships",
-      "scholarship for computer engineering",
-      "scholarship for IT engineering",
-      "scholarship for mechanical engineering",
-      "scholarship for civil engineering",
-      "scholarship for chemical engineering",
-      "list of scholarship",
-      "comps scholarship",
-      "IT scholarship",
-      "mechanical scholarship",
-      "civil scholarship",
-      "chemical scholarship",
-      "automobile scholarship",
-      "first year scholarship",
-      "second year scholarship",
-      "third year scholarship",
-      "fourth year scholarship"
-   ],
-   "responses": [
-      "Many government scholarships are supported by our university. For details and updates visit <a target=\"_blank\" href=\"(SCHOLARSHIP DETAILS LINK)\">here</a>"
-   ],
-   "context_set": ""
-},
- {
-   "tag": "facilities",
-   "patterns": [
-      "What facilities college provide",
-      "College facility",
-      "What are college facilities",
-      "facilities",
-      "facilities provided"
-   ],
-   "responses": [
-      "Our university's Engineering department provides fully AC Lab with internet connection, smart classroom, Auditorium, library,canteen"
-   ],
-   "context_set": ""
-},
- {
-   "tag": "college intake",
-   "patterns": [
-      "max number of students",
-      "number of seats per branch",
-      "number of seats in each branch",
-      "maximum number of seats",
-      "maximum students intake",
-      "What is college intake",
-      "how many stundent are taken in each branch",
-      "seat allotment",
-      "seats"
-   ],
-   "responses": [
-      "For IT, Computer and extc 60 per branch and seat may be differ for different department."
-   ],
-   "context_set": ""
-},
- {
-   "tag": "uniform",
-   "patterns": [
-      "college dress code",
-      "college dresscode",
-      "what is the uniform",
-      "can we wear casuals",
-      "Does college have an uniform",
-      "Is there any uniform",
-      "uniform",
-      "what about uniform",
-      "do we have to wear uniform"
-   ],
-   "responses": [
-      "ENTER YOUR OWN UNIVERSITY UNIFORM CIRCULER"
-   ],
-   "context_set": ""
-},
- {
-   "tag": "committee",
-   "patterns": [
-      "what are the different committe in college",
-      "different committee in college",
-      "Are there any committee in college",
-      "Give me committee details",
-      "committee",
-      "how many committee are there in college"
-   ],
-   "responses": [
-      "For the various committe in college contact this number: ADD NUMBER"
-   ],
-   "context_set": ""
-},
- {
-   "tag": "random",
-   "patterns": [
-      "I love you",
-      "Will you marry me",
-      "Do you love me"
-   ],
-   "responses": [
-      "I am not program for this, please ask appropriate query"
-   ],
-   "context_set": ""
-},
- {
-   "tag": "swear",
-   "patterns": [
-      "fuck",
-      "bitch",
-      "shut up",
-      "hell",
-      "stupid",
-      "idiot",
-      "dumb ass",
-      "asshole",
-      "fucker"
-   ],
-   "responses": [
-      "please use appropriate language",
-      "Maintaining decency would be appreciated"
-   ],
-   "context_set": ""
-},
- {
-   "tag": "vacation",
-   "patterns": [
-      "holidays",
-      "when will semester starts",
-      "when will semester end",
-      "when is the holidays",
-      "list of holidays",
-      "Holiday in these year",
-      "holiday list",
-      "about vacations",
-      "about holidays",
-      "When is vacation",
-      "When is holidays",
-      "how long will be the vacation"
-   ],
-   "responses": [
-      "Academic calender is given to you by your class-soordinators after you join your respective classes"
-   ],
-   "context_set": ""
-},
- {
-   "tag": "sports",
-   "patterns": [
-      "sports and games",
-      "give sports details",
-      "sports infrastructure",
-      "sports facilities",
-      "information about sports",
-      "Sports activities",
-      "please provide sports and games information"
-   ],
-   "responses": [
-      "Our university encourages all-round development of students and hence provides sports facilities in the campus. For more details visit<a target=\"_blank\" href=/\"(LINK IF HAVE)\">here</a>"
-   ],
-   "context_set": ""
-},
- {
-   "tag": "salutaion",
-   "patterns": [
-      "okk",
-      "okie",
-      "nice work",
-      "well done",
-      "good job",
-      "thanks for the help",
-      "Thank You",
-      "its ok",
-      "Thanks",
-      "Good work",
-      "k",
-      "ok",
-      "okay"
-   ],
-   "responses": [
-      "I am glad I helped you",
-      "welcome, anything else i can assist you with?"
-   ],
-   "context_set": ""
-},
- {
-   "tag": "task",
-   "patterns": [
-      "what can you do",
-      "what are the thing you can do",
-      "things you can do",
-      "what can u do for me",
-      "how u can help me",
-      "why i should use you"
-   ],
-   "responses": [
-      "I can answer to low-intermediate questions regarding college",
-      "You can ask me questions regarding college, and i will try to answer them"
-   ],
-   "context_set": ""
-},
- {
-   "tag": "ragging",
-   "patterns": [
-      "ragging",
-      "is ragging practice active in college",
-      "does college have any antiragging facility",
-      "is there any ragging cases",
-      "is ragging done here",
-      "ragging against",
-      "antiragging facility",
-      "ragging juniors",
-      "ragging history",
-      "ragging incidents"
-   ],
-   "responses": [
-      "We are Proud to tell you that our college provides ragging free environment, and we have strict rules against ragging"
-   ],
-   "context_set": ""
-},
- {
-   "tag": "hod",
-   "patterns": [
-      "hod",
-      "hod name",
-      "who is the hod"
-   ],
-   "responses": [
-      "HODs differ for each branch, please be more specific like: (HOD it)"
-   ],
-   "context_set": ""
-}
+        "tag": "greeting",
+        "patterns": ["Hi", "Hello", "Hey", "How are you", "What's up"],
+        "responses": ["Hello! How can I help you with green technology today?", "Hi there! Let's talk about sustainability."]
+    },
+    {
+        "tag": "renewable_energy",
+        "patterns": ["Tell me about renewable energy", "What is renewable energy?", "Examples of renewable energy?"],
+        "responses": [
+            "Renewable energy comes from natural sources like sunlight, wind, rain, tides, and geothermal heat. Solar panels and wind turbines are common examples.",
+            "Renewable energy is a sustainable alternative to fossil fuels and includes sources like solar, wind, and hydro power."
+        ]
+    },
+    {
+        "tag": "carbon_footprint",
+        "patterns": ["How can I reduce my carbon footprint?", "Ways to lower carbon emissions?", "What is a carbon footprint?"],
+        "responses": [
+            "A carbon footprint measures the total greenhouse gases emitted by your activities. You can reduce it by using public transport, switching to renewable energy, and reducing waste.",
+            "To lower your carbon footprint, adopt sustainable practices like eating less meat, conserving water, and using energy-efficient appliances."
+        ]
+    },
+    {
+        "tag": "sustainability",
+        "patterns": ["What is sustainability?", "Why is sustainability important?", "Explain sustainability."],
+        "responses": [
+            "Sustainability means meeting our needs without compromising the ability of future generations to meet theirs. It involves balancing environmental, economic, and social factors.",
+            "Sustainability is about using resources wisely to protect the planet while ensuring economic and social well-being."
+        ]
+    },
+    {
+        "tag": "goodbye",
+        "patterns": ["Goodbye", "Bye", "See you later"],
+        "responses": ["Goodbye! Remember to stay green and make eco-friendly choices.", "Bye! Keep working towards a sustainable future."]
+    },
+    {
+        "tag": "solar_energy",
+        "patterns": ["What is solar energy?", "Tell me about solar panels", "How does solar energy work?"],
+        "responses": [
+            "Solar energy is energy derived from the sun's radiation. It can be harnessed using solar panels or solar thermal systems to generate electricity or heat.",
+            "Solar panels capture sunlight and convert it into electricity. They are an important part of the renewable energy revolution."
+        ]
+    },
+    {
+        "tag": "wind_energy",
+        "patterns": ["What is wind energy?", "How do wind turbines work?", "Tell me about wind power."],
+        "responses": [
+            "Wind energy is generated by converting the kinetic energy of wind into electricity using wind turbines.",
+            "Wind turbines capture the wind's energy to turn blades that generate electricity. It’s a clean and renewable energy source."
+        ]
+    },
+    {
+        "tag": "energy_efficiency",
+        "patterns": ["What is energy efficiency?", "How can I improve energy efficiency?", "Why is energy efficiency important?"],
+        "responses": [
+            "Energy efficiency is the practice of using less energy to perform the same task. It's important for reducing greenhouse gas emissions and conserving resources.",
+            "You can improve energy efficiency by using energy-efficient appliances, insulating your home, and switching to LED lighting."
+        ]
+    },
+    {
+        "tag": "green_building",
+        "patterns": ["What is a green building?", "How can buildings be eco-friendly?", "Tell me about sustainable buildings."],
+        "responses": [
+            "A green building is designed to reduce its environmental impact. This includes energy efficiency, water conservation, and using sustainable materials.",
+            "Sustainable buildings use eco-friendly construction methods, renewable energy sources, and innovative designs to minimize waste and energy consumption."
+        ]
+    },
+    {
+        "tag": "electric_vehicles",
+        "patterns": ["Tell me about electric vehicles", "What are electric cars?", "How do electric vehicles work?"],
+        "responses": [
+            "Electric vehicles (EVs) run on electricity stored in batteries instead of gasoline or diesel. They emit fewer greenhouse gases and reduce air pollution.",
+            "Electric vehicles are powered by electricity, usually from renewable sources, and are a cleaner alternative to traditional vehicles."
+        ]
+    },
+    {
+        "tag": "carbon_offset",
+        "patterns": ["What is carbon offset?", "How does carbon offsetting work?", "How can I offset my carbon emissions?"],
+        "responses": [
+            "Carbon offsetting is the practice of compensating for emissions by funding projects that reduce or capture an equivalent amount of greenhouse gases.",
+            "You can offset your carbon emissions by investing in renewable energy projects, tree planting initiatives, or carbon capture technologies."
+        ]
+    },
+    {
+        "tag": "climate_change",
+        "patterns": ["What is climate change?", "How does climate change affect the planet?", "What can we do to stop climate change?"],
+        "responses": [
+            "Climate change refers to long-term changes in temperature and weather patterns caused by human activity, particularly the burning of fossil fuels.",
+            "To fight climate change, we can reduce emissions, use renewable energy, protect forests, and support policies that promote sustainability."
+        ]
+    },
+    {
+        "tag": "plastic_pollution",
+        "patterns": ["What is plastic pollution?", "How can we reduce plastic waste?", "Why is plastic pollution a problem?"],
+        "responses": [
+            "Plastic pollution is the accumulation of plastic waste in the environment. It harms wildlife, ecosystems, and contributes to long-term environmental degradation.",
+            "We can reduce plastic pollution by reducing plastic use, recycling, and opting for sustainable alternatives like biodegradable materials."
+        ]
+    },
+    {
+        "tag": "water_conservation",
+        "patterns": ["How can I conserve water?", "Why is water conservation important?", "Tell me about water conservation methods."],
+        "responses": [
+            "Water conservation involves reducing water wastage and using water efficiently. You can conserve water by fixing leaks, using water-efficient appliances, and reducing water use in landscaping.",
+            "Saving water helps to ensure that this precious resource remains available for future generations and supports the health of our environment."
+        ]
+    },
+    {
+        "tag": "sustainable_food",
+        "patterns": ["What is sustainable food?", "How can I eat sustainably?", "Why is sustainable food important?"],
+        "responses": [
+            "Sustainable food involves choosing foods that are produced with minimal environmental impact. This includes organic, locally grown, and plant-based foods.",
+            "Eating sustainably means consuming foods that are produced in ways that protect the environment, support fair trade, and promote animal welfare."
+        ]
+    },
+    {
+        "tag": "green_transportation",
+        "patterns": ["What is green transportation?", "How can I travel sustainably?", "Tell me about eco-friendly transportation options."],
+        "responses": [
+            "Green transportation includes options that have a lower environmental impact, such as electric vehicles, cycling, walking, and using public transport.",
+            "By choosing green transportation, we can reduce our carbon footprint, improve air quality, and support cleaner, more sustainable cities."
+        ]
+    },
+    {
+        "tag": "sustainable_fashion",
+        "patterns": ["What is sustainable fashion?", "How can I shop sustainably?", "Tell me about eco-friendly fashion brands."],
+        "responses": [
+            "Sustainable fashion focuses on producing clothing in ways that are kind to the environment and workers. It involves using sustainable materials, ethical production methods, and reducing waste.",
+            "Eco-friendly fashion includes brands that use recycled materials, promote fair labor practices, and reduce waste by encouraging upcycling and repair."
+        ]
+    },
+    {
+        "tag": "green_energy_innovation",
+        "patterns": ["What are the latest green energy innovations?", "Tell me about new renewable energy technologies.", "What are the upcoming trends in green energy?"],
+        "responses": [
+            "Recent innovations in green energy include advanced solar cells, wind energy storage solutions, and bioenergy technologies like algae-based fuels.",
+            "Emerging trends in green energy involve floating wind farms, enhanced geothermal systems, and breakthrough solar technologies like perovskite solar cells."
+        ]
+    },
+    {
+        "tag": "biofuels",
+        "patterns": ["What are biofuels?", "Tell me about biofuel production.", "How do biofuels work?"],
+        "responses": [
+            "Biofuels are renewable fuels made from organic materials, such as plant or animal waste. They can replace fossil fuels in transportation and energy production.",
+            "Biofuels can be made from crops like corn or algae and serve as a cleaner alternative to gasoline and diesel, reducing overall greenhouse gas emissions."
+        ]
+    },
+    {
+        "tag": "sustainable_agriculture",
+        "patterns": ["What is sustainable agriculture?", "How can farming be eco-friendly?", "Tell me about sustainable farming methods."],
+        "responses": [
+            "Sustainable agriculture is farming that maintains or improves soil health, conserves water, reduces pollution, and promotes biodiversity.",
+            "Methods like crop rotation, organic farming, and reduced pesticide use help make agriculture more sustainable and less damaging to the environment."
+        ]
+    },
+    {
+        "tag": "green_finance",
+        "patterns": ["What is green finance?", "How does green finance work?", "Tell me about sustainable investment options."],
+        "responses": [
+            "Green finance involves investments in projects that have environmental benefits, such as renewable energy, green infrastructure, and low-carbon technologies.",
+            "Green bonds, impact investing, and sustainable mutual funds are examples of financial products that support environmentally friendly initiatives."
+        ]
+    },
+    {
+        "tag": "climate_resilience",
+        "patterns": ["What is climate resilience?", "How can communities build climate resilience?", "What are some strategies for climate adaptation?"],
+        "responses": [
+            "Climate resilience refers to the ability of a system or community to anticipate, prepare for, and respond to climate impacts, such as floods, droughts, and extreme weather events.",
+            "Building resilience involves strategies like creating flood-resistant infrastructure, planting climate-resilient crops, and protecting natural ecosystems like wetlands."
+        ]
+    },
+    {
+        "tag": "green_jobs",
+        "patterns": ["What are green jobs?", "How can I find a job in green technology?", "Tell me about eco-friendly careers."],
+        "responses": [
+            "Green jobs involve work that contributes to preserving or restoring the environment. These careers include roles in renewable energy, environmental conservation, and sustainable construction.",
+            "To find a green job, consider pursuing careers in solar panel installation, environmental engineering, green building design, or sustainability consulting."
+        ]
+    },
+    {
+        "tag": "smart_grids",
+        "patterns": ["What is a smart grid?", "How do smart grids work?", "Tell me about the future of electrical grids."],
+        "responses": [
+            "A smart grid uses digital technology to monitor and manage electricity flow, enabling better integration of renewable energy and more efficient distribution.",
+            "Smart grids allow for real-time communication between utilities and consumers, improving grid reliability and helping reduce energy waste."
+        ]
+    },
+    {
+        "tag": "circular_economy",
+        "patterns": ["What is the circular economy?", "How does the circular economy work?", "Tell me about the benefits of a circular economy."],
+        "responses": [
+            "The circular economy is a system where resources are reused, repaired, and recycled to create a closed-loop system, minimizing waste and conserving resources.",
+            "In a circular economy, products are designed for durability, repairability, and recyclability, reducing the need for new raw materials."
+        ]
+    },
+    {
+        "tag": "greenwashing",
+        "patterns": ["What is greenwashing?", "How can I avoid greenwashing?", "What should I watch out for in eco-friendly claims?"],
+        "responses": [
+            "Greenwashing refers to misleading claims made by companies to appear environmentally friendly when their practices are not truly sustainable.",
+            "To avoid greenwashing, look for third-party certifications, such as organic labels or energy-efficient certifications, and do some research on the company’s actual practices."
+        ]
+    },
+    {
+        "tag": "zero_waste_living",
+        "patterns": ["What is zero waste living?", "How can I live a zero waste lifestyle?", "Tell me about zero waste practices."],
+        "responses": [
+            "Zero waste living is a lifestyle that aims to reduce the amount of waste sent to landfills by reusing, recycling, and composting as much as possible.",
+            "Practices for zero waste living include avoiding single-use plastics, buying in bulk, and using reusable containers and bags."
+        ]
+    },
+    {
+        "tag": "green_chemistry",
+        "patterns": ["What is green chemistry?", "How does green chemistry help the environment?", "Tell me about sustainable chemistry."],
+        "responses": [
+            "Green chemistry is the design of chemical products and processes that reduce or eliminate the use and generation of hazardous substances.",
+            "Green chemistry helps reduce pollution by using sustainable raw materials, energy-efficient processes, and minimizing toxic byproducts."
+        ]
+    },
+    {
+        "tag": "environmental_education",
+        "patterns": ["Why is environmental education important?", "How can I learn more about environmental issues?", "Tell me about eco-friendly education programs."],
+        "responses": [
+            "Environmental education helps people understand environmental issues, sustainability practices, and ways to protect natural resources.",
+            "Programs like eco-schools and community sustainability workshops offer practical knowledge to individuals looking to reduce their environmental impact."
+        ]
+    },
+    {
+        "tag": "sustainable_transportation_infrastructure",
+        "patterns": ["What is sustainable transportation infrastructure?", "How can cities become more sustainable?", "Tell me about eco-friendly transportation systems."],
+        "responses": [
+            "Sustainable transportation infrastructure includes public transport systems, bike lanes, pedestrian paths, and electric vehicle charging stations designed to reduce carbon emissions.",
+            "Cities can become more sustainable by promoting public transit, building bike-friendly infrastructure, and investing in electric vehicle infrastructure."
+        ]
+    },
+    {
+        "tag": "eco_building_materials",
+        "patterns": ["What are eco-friendly building materials?", "Tell me about sustainable construction materials.", "How can I build using green materials?"],
+        "responses": [
+            "Eco-friendly building materials include bamboo, reclaimed wood, recycled steel, and low-VOC paints. These materials reduce environmental impact and improve energy efficiency.",
+            "Using sustainable construction materials helps reduce carbon emissions, conserve natural resources, and minimize waste during construction."
+        ]
+    },
+    {
+        "tag": "eco_tourism",
+        "patterns": ["What is eco-tourism?", "How can I travel sustainably?", "Tell me about eco-friendly travel options."],
+        "responses": [
+            "Eco-tourism is responsible travel that focuses on conservation and supporting local communities while minimizing environmental impact.",
+            "Sustainable travel practices include choosing eco-friendly accommodations, reducing energy consumption, and participating in activities that promote conservation."
+        ]
+    }
 ]
 
 # Prepare data for training
@@ -792,12 +284,10 @@ clf.fit(x_train, y_train)
 
 # Define the chatbot function
 def chatbot(input_text):
-    input_text = vectorizer.transform([input_text])
     try:
-        tag = clf.predict(input_text)[0]
         for intent in intents:
-            if intent['tag'] == tag:
-                return random.choice(intent['responses'])
+            if any(pattern.lower() in input_text.lower() for pattern in intent["patterns"]):
+                return random.choice(intent["responses"])
     except:
         return "I'm sorry, I didn't understand that. Could you rephrase?"
 
@@ -806,11 +296,26 @@ def main():
     st.title("Green Technology ChatBot")
     st.write("Welcome! I'm here to help you learn about green technology and sustainability.")
     
+    # Initialize session state for chat history if it doesn't exist
+    if 'chat_history' not in st.session_state:
+        st.session_state.chat_history = []
+
+    # User input
     user_input = st.text_input("You:", key="user_input")
+
     if user_input:
+        # Get the chatbot response
         response = chatbot(user_input)
-        st.text_area("Chatbot:", value=response, height=100, max_chars=None, key="chatbot_response")
-        
+
+        # Add the user input and chatbot response to the session history
+        st.session_state.chat_history = [(f"You: {user_input}", f"ChatBot: {response}")]
+
+        # Display the latest chat history (only the most recent message)
+        for user_msg, bot_msg in st.session_state.chat_history:
+            st.write(user_msg)
+            st.write(bot_msg)
+
+        # Check if response includes "goodbye" or "bye"
         if "goodbye" in response.lower() or "bye" in response.lower():
             st.write("Thank you for using me! Stay eco-friendly and protect our planet.")
             st.stop()
